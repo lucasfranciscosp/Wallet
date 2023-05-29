@@ -11,16 +11,10 @@ struct Add_to_Wallet_ModalView: View {
     
     @Environment(\.presentationMode) var presentation //Var in order to use modal
     
-    @State var modalStates: ModalStates
+    @Binding var isModalOpen: Bool
     
-   
- 
     var body: some View {
-        
-//        if(modalStates.addWalletModalPresented == false){
-//            presentation.wrappedValue.dismiss()
-//        }
-        
+          
         NavigationView{
             VStack{
                 
@@ -67,7 +61,7 @@ struct Add_to_Wallet_ModalView: View {
                 List {
                     
                     //First button
-                    NavigationLink(destination: Register_Card_ModalView(modalStates: ModalStates())){
+                    NavigationLink(destination: Register_Card_ModalView(isModalOpen: $isModalOpen)){
                         HStack{
                             ZStack{
                                 Color("LightBlue")
@@ -82,12 +76,9 @@ struct Add_to_Wallet_ModalView: View {
                             .font(.body)
                     }
                     .listRowBackground(Color("LightGray"))
-                    .simultaneousGesture(TapGesture().onEnded{
-                        modalStates.registerCardPresented = true
-                    })
                     
                     //Second button
-                    NavigationLink(destination: Register_Card_ModalView(modalStates: ModalStates())) {
+                    NavigationLink(destination: Register_Card_ModalView(isModalOpen: $isModalOpen)) {
                         HStack{
                             ZStack{
                                 Color("LightGreen")
@@ -102,8 +93,8 @@ struct Add_to_Wallet_ModalView: View {
                             .font(.body)
                     }
                     .listRowBackground(Color("LightGray"))
-
-                
+                    
+                    
                 }
                 .scrollContentBackground(.hidden)
                 .padding(.top, -45) //Find a better way to put the list close to the title of the list
@@ -113,13 +104,6 @@ struct Add_to_Wallet_ModalView: View {
         }
     }
 }
-
-struct Add_to_Wallet_ModalView_Previews: PreviewProvider {
-    static var previews: some View {
-        Add_to_Wallet_ModalView(modalStates: ModalStates())
-    }
-}
-
 
 
 

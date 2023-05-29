@@ -11,7 +11,7 @@ import SwiftUI
 struct IOS_Wallet_CopycatApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView(modalStates: ModalStates())
+            HomeView()
         }
     }
 }

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct registerCVVView: View {
     
+    @Environment(\.presentationMode) var presentation //Var in order to use modal
+    
     @State var expirationDate = Date.now
     @State var securityCode = ""
-    @ObservedObject var modalStates: ModalStates
+    @Binding var isModalOpen: Bool
     
     var body: some View {
         VStack{
@@ -58,22 +60,10 @@ struct registerCVVView: View {
         }
         //"Next" button on the top of the screen
         .toolbar {
-            NavigationLink(destination: HomeView(modalStates: ModalStates())){
-                Text("Next")
+            Button("Next") {
+                isModalOpen = false
             }
             .disabled(securityCode.isEmpty) //The button is gray when securityCode and expirationDate is empty
-            .simultaneousGesture(TapGesture().onEnded{
-                modalStates.addWalletModalPresented = false
-                modalStates.registerCardPresented = false
-                modalStates.registerCVVPresented = false
-            })
         }
     }
 }
-
-struct registerCVVView_Previews: PreviewProvider {
-    static var previews: some View {
-        registerCVVView(modalStates: ModalStates())
-    }
-}
-

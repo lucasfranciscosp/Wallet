@@ -10,17 +10,18 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var modalStates: ModalStates
+    @State var isModalOpen = false
 
     var body: some View {
         NavigationView {
             ScrollView{
                 HStack{
+                    
                     Text("Wallet")
                         .font(.system(size: 36, weight: .bold))
                         .frame(maxWidth: 270, alignment: .leading)
                     
-                    //Botão de adicionar cartão
+                    //Botão de rastrear pacote
                     NavigationLink(destination: Text("Rastrear Pacote View")){
                         ZStack{
                             Color(.black)
@@ -34,7 +35,7 @@ struct HomeView: View {
                     
                     //Botão de adicionar cartao
                     Button(action: {
-                        modalStates.addWalletModalPresented = true
+                        isModalOpen = true
                     }, label: {
                         ZStack{
                             Color(.black)
@@ -48,8 +49,8 @@ struct HomeView: View {
                 }
                 .padding(.top, 32)
                 .padding(.bottom, 8)
-                .sheet(isPresented: $modalStates.addWalletModalPresented){
-                    Add_to_Wallet_ModalView(modalStates: ModalStates())
+                .sheet(isPresented: $isModalOpen){
+                    Add_to_Wallet_ModalView(isModalOpen: $isModalOpen)
                 }
                 VStack{
                     
@@ -79,8 +80,7 @@ struct HomeView: View {
                                             .frame(maxWidth: 220, alignment: .leading)
                                             .foregroundColor(.white)
                                         Button(action:  {
-                                            print("Adicionar cartão pressionado")
-                                            modalStates.addWalletModalPresented = true
+                                            isModalOpen = true
                                         }, label: {
                                             ZStack{
                                                 Color(.white)
@@ -89,8 +89,8 @@ struct HomeView: View {
                                                 Text("ADD")
                                                     .font(.system(size: 16, weight: .semibold))
                                             }
-                                        }) .sheet(isPresented: $modalStates.addWalletModalPresented){
-                                            Add_to_Wallet_ModalView(modalStates: ModalStates())
+                                        }) .sheet(isPresented: $isModalOpen){
+                                            Add_to_Wallet_ModalView(isModalOpen:  $isModalOpen)
                                         }
                                     }
                                 }
@@ -120,6 +120,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(modalStates: ModalStates())
+        HomeView()
     }
 }
