@@ -20,7 +20,7 @@ struct CardsView: View {
                 }
             }
         }
-        .padding([.horizontal, .top])
+        .padding(.horizontal)
     }
     
     //Card View

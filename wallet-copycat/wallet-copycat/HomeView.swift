@@ -85,11 +85,12 @@ struct HomeView: View {
                                 }
                             }
                         }
-                        .padding(.bottom, -16)
                     }
                     
                     //View que mostra os cartões cadastrados
-                    CardsView()
+                    NavigationLink(destination: Text("Extrato do Cartão View")){
+                        CardsView()
+                    }
                     
                     //Botão de ver os passes expirados
                     NavigationLink(destination: Text("Expired Passes View")){
