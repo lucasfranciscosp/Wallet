@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var unlocked = false
+    @State private var text = "LOCKED"
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("ola mundo!!!")
+            Text(text)
+                .bold()
+            Button("Usar Cartão"){
+                Task {
+                    self.text = await authenticate()
+                }
+            }
         }
         .padding()
     }
