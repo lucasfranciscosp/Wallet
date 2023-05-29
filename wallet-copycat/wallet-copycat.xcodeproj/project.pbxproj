@@ -16,6 +16,10 @@
 		46E2AE0F2A20EB8400467F69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E2AE0E2A20EB8400467F69 /* ContentView.swift */; };
 		46E2AE112A20EB8500467F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E2AE102A20EB8500467F69 /* Assets.xcassets */; };
 		46E2AE142A20EB8500467F69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E2AE132A20EB8500467F69 /* Preview Assets.xcassets */; };
+		7464B4682A24D00A00B7567E /* ModalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B4672A24D00A00B7567E /* ModalState.swift */; };
+		7464B46A2A24D02200B7567E /* registerCVVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B4692A24D02200B7567E /* registerCVVView.swift */; };
+		7464B46C2A24D04500B7567E /* Add_to_wallet_ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */; };
+		7464B46E2A24D06500B7567E /* Register_Card_ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */; };
 		B6F8042C2A212BD4007A0580 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F8042B2A212BD4007A0580 /* FaceID.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		46E2AE0E2A20EB8400467F69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46E2AE102A20EB8500467F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E2AE132A20EB8500467F69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7464B4672A24D00A00B7567E /* ModalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalState.swift; sourceTree = "<group>"; };
+		7464B4692A24D02200B7567E /* registerCVVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerCVVView.swift; sourceTree = "<group>"; };
+		7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_to_wallet_ModalView.swift; sourceTree = "<group>"; };
+		7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Card_ModalView.swift; sourceTree = "<group>"; };
 		B6F8042B2A212BD4007A0580 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +71,10 @@
 		46E2AE0B2A20EB8400467F69 /* wallet-copycat */ = {
 			isa = PBXGroup;
 			children = (
+				7464B4672A24D00A00B7567E /* ModalState.swift */,
+				7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */,
+				7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */,
+				7464B4692A24D02200B7567E /* registerCVVView.swift */,
 				B6F8042B2A212BD4007A0580 /* FaceID.swift */,
 				46E2AE0C2A20EB8400467F69 /* wallet_copycatApp.swift */,
 				46E2AE0E2A20EB8400467F69 /* ContentView.swift */,
@@ -156,13 +168,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				464885082A24BFA100B1A36C /* HomeView.swift in Sources */,
+				7464B4682A24D00A00B7567E /* ModalState.swift in Sources */,
 				4648850C2A24BFE400B1A36C /* CardsView.swift in Sources */,
 				B6F8042C2A212BD4007A0580 /* FaceID.swift in Sources */,
 				46E2AE0F2A20EB8400467F69 /* ContentView.swift in Sources */,
+				7464B46E2A24D06500B7567E /* Register_Card_ModalView.swift in Sources */,
+				7464B46A2A24D02200B7567E /* registerCVVView.swift in Sources */,
 				4648850E2A24C00600B1A36C /* View+CornerRadius.swift in Sources */,
 				46E2AE0D2A20EB8400467F69 /* wallet_copycatApp.swift in Sources */,
 				4648850A2A24BFCF00B1A36C /* Card.swift in Sources */,
 				464885102A24C01A00B1A36C /* RoundedCorner.swift in Sources */,
+				7464B46C2A24D04500B7567E /* Add_to_wallet_ModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
