@@ -41,7 +41,7 @@ struct HomeView: View {
                         }
                     }
                 }
-                .padding(.top, 32)
+                .padding(.top, 48)
                 .padding(.bottom, 8)
                 VStack{
                     
