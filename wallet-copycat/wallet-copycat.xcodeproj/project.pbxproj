@@ -20,6 +20,7 @@
 		7464B46A2A24D02200B7567E /* registerCVVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B4692A24D02200B7567E /* registerCVVView.swift */; };
 		7464B46C2A24D04500B7567E /* Add_to_wallet_ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */; };
 		7464B46E2A24D06500B7567E /* Register_Card_ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */; };
+		74CAF9A82A2624AE0037C433 /* nfcClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CAF9A72A2624AE0037C433 /* nfcClass.swift */; };
 		B6F8042C2A212BD4007A0580 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F8042B2A212BD4007A0580 /* FaceID.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		7464B4692A24D02200B7567E /* registerCVVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerCVVView.swift; sourceTree = "<group>"; };
 		7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_to_wallet_ModalView.swift; sourceTree = "<group>"; };
 		7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Card_ModalView.swift; sourceTree = "<group>"; };
+		74CAF9A72A2624AE0037C433 /* nfcClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nfcClass.swift; sourceTree = "<group>"; };
+		74CAF9A92A26256F0037C433 /* wallet-copycat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "wallet-copycat.entitlements"; sourceTree = "<group>"; };
 		B6F8042B2A212BD4007A0580 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +74,8 @@
 		46E2AE0B2A20EB8400467F69 /* wallet-copycat */ = {
 			isa = PBXGroup;
 			children = (
+				74CAF9A92A26256F0037C433 /* wallet-copycat.entitlements */,
+				74CAF9A72A2624AE0037C433 /* nfcClass.swift */,
 				7418D9BC2A26226E005AA29E /* Notification.swift */,
 				7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */,
 				7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */,
@@ -174,6 +179,7 @@
 				7464B46E2A24D06500B7567E /* Register_Card_ModalView.swift in Sources */,
 				7464B46A2A24D02200B7567E /* registerCVVView.swift in Sources */,
 				4648850E2A24C00600B1A36C /* View+CornerRadius.swift in Sources */,
+				74CAF9A82A2624AE0037C433 /* nfcClass.swift in Sources */,
 				46E2AE0D2A20EB8400467F69 /* wallet_copycatApp.swift in Sources */,
 				7418D9BD2A26226E005AA29E /* Notification.swift in Sources */,
 				4648850A2A24BFCF00B1A36C /* Card.swift in Sources */,
@@ -304,12 +310,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "wallet-copycat/wallet-copycat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet-copycat/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VCZGT86T2;
+				DEVELOPMENT_TEAM = Q92SD7R6D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -334,12 +342,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "wallet-copycat/wallet-copycat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet-copycat/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VCZGT86T2;
+				DEVELOPMENT_TEAM = Q92SD7R6D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
