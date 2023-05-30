@@ -20,45 +20,45 @@ struct registerCVVView: View {
     
     var body: some View {
         VStack{
-                
-                Text("Card Details")
-                    .padding()
-                    .font(.largeTitle)
-                    .bold()
-                
-            Text("Enter your card information.")
-                    .multilineTextAlignment(.center)
-                    .frame(width: 350)
-                    .font(.body)
-                
-                Form{
-                    
-                    HStack{
-        
-                        DatePicker(selection: $expirationDate, in: ...Date.distantFuture, displayedComponents: .date)
-                        {
-                            Text("Select a date")
-                                .bold()
-                        }
-                        
-                    }.listRowBackground(Color("LightGray"))
-                    
-                    HStack{
-                        
-                        Text("Security Code     ") //TextField Title
-                            .bold()
-                        
-                        TextField("Required", text: $securityCode)
-                            .keyboardType(.numberPad)
-                            
-                        
-                    }.listRowBackground(Color("LightGray"))
-                    
-                }
-                .scrollContentBackground(.hidden)
-                .padding(.top, -25) ///Look for another way to do this
             
-                Spacer()
+            Text("Card Details")
+                .padding()
+                .font(.largeTitle)
+                .bold()
+            
+            Text("Enter your card information.")
+                .multilineTextAlignment(.center)
+                .frame(width: 350)
+                .font(.body)
+            
+            Form{
+                
+                HStack{
+                    
+                    DatePicker(selection: $expirationDate, in: ...Date.distantFuture, displayedComponents: .date)
+                    {
+                        Text("Select a date")
+                            .bold()
+                    }
+                    
+                }.listRowBackground(Color("LightGray"))
+                
+                HStack{
+                    
+                    Text("Security Code     ") //TextField Title
+                        .bold()
+                    
+                    TextField("Required", text: $securityCode)
+                        .keyboardType(.numberPad)
+                    
+                    
+                }.listRowBackground(Color("LightGray"))
+                
+            }
+            .scrollContentBackground(.hidden)
+            .padding(.top, -25) ///Look for another way to do this
+            
+            Spacer()
             
         }
         //"Next" button on the top of the screen
@@ -68,7 +68,7 @@ struct registerCVVView: View {
                 if cards.count.isMultiple(of: 2){
                     cards.append(Card(name: name, cardNumber: cardNumber, cardImage: "CardNU"))
                 } else {
-                    cards.append(Card(name: name, cardNumber: cardNumber, cardImage: "CardNU"))
+                    cards.append(Card(name: name, cardNumber: cardNumber, cardImage: "CardBB"))
                 }
             }
             .disabled(securityCode.isEmpty) //The button is gray when securityCode and expirationDate is empty

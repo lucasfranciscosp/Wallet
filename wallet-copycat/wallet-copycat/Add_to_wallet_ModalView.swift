@@ -15,7 +15,7 @@ struct Add_to_Wallet_ModalView: View {
     @Binding var cards: [Card]
     
     var body: some View {
-          
+        
         NavigationView{
             VStack{
                 

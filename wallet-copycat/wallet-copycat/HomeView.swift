@@ -102,9 +102,7 @@ struct HomeView: View {
                     }
                     
                     //View que mostra os cartões cadastrados
-                    NavigationLink(destination: Text("Extrato do Cartão View")){
-                        CardsView(cards: $cards)
-                    }
+                    CardsView(cards: $cards)
                     
                     //Botão de ver os passes expirados
                     NavigationLink(destination: Text("Expired Passes View")){

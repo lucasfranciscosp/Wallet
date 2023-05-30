@@ -18,7 +18,9 @@ struct CardsView: View {
                 VStack(spacing: 0){
                     //Cards
                     ForEach(cards){card in
-                       CardView(card: card)
+                        NavigationLink(destination: Text("Extrato do Cartão View")){
+                            CardView(card: card)
+                        }
                     }
                 }
             }
@@ -36,7 +38,7 @@ struct CardsView: View {
                 Image(card.cardImage)
                     .resizable()
                     .scaledToFit()
-                    
+                
                 
                 //Card Details
                 VStack(alignment: .leading, spacing: 10){
@@ -53,7 +55,7 @@ struct CardsView: View {
         .frame(width: 350, height: 220)
         
     }
-        
+    
 }
 
 //struct Home_Previews: PreviewProvider {
