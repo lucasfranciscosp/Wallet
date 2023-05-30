@@ -12,6 +12,7 @@ struct Add_to_Wallet_ModalView: View {
     @Environment(\.presentationMode) var presentation //Var in order to use modal
     
     @Binding var isModalOpen: Bool
+    @Binding var cards: [Card]
     
     var body: some View {
           
@@ -61,7 +62,7 @@ struct Add_to_Wallet_ModalView: View {
                 List {
                     
                     //First button
-                    NavigationLink(destination: Register_Card_ModalView(isModalOpen: $isModalOpen)){
+                    NavigationLink(destination: Register_Card_ModalView(isModalOpen: $isModalOpen, cards: $cards)){
                         HStack{
                             ZStack{
                                 Color("LightBlue")
@@ -78,7 +79,7 @@ struct Add_to_Wallet_ModalView: View {
                     .listRowBackground(Color("LightGray"))
                     
                     //Second button
-                    NavigationLink(destination: Register_Card_ModalView(isModalOpen: $isModalOpen)) {
+                    NavigationLink(destination: Register_Card_ModalView(isModalOpen: $isModalOpen, cards: $cards)) {
                         HStack{
                             ZStack{
                                 Color("LightGreen")

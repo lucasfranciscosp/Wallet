@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 struct CardsView: View {
+    
+    @Binding var cards: [Card]
+    
     var body: some View {
         VStack{
             ScrollView(.vertical, showsIndicators: false){
@@ -53,8 +56,8 @@ struct CardsView: View {
         
 }
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        CardsView()
-    }
-}
+//struct Home_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardsView()
+//    }
+//}

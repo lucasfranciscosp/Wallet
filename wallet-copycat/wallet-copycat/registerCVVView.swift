@@ -14,6 +14,9 @@ struct registerCVVView: View {
     @State var expirationDate = Date.now
     @State var securityCode = ""
     @Binding var isModalOpen: Bool
+    @Binding var cardNumber: String
+    @Binding var name: String
+    @Binding var cards: [Card]
     
     var body: some View {
         VStack{
@@ -62,6 +65,11 @@ struct registerCVVView: View {
         .toolbar {
             Button("Next") {
                 isModalOpen = false
+                if cards.count.isMultiple(of: 2){
+                    cards.append(Card(name: name, cardNumber: cardNumber, cardImage: "CardNU"))
+                } else {
+                    cards.append(Card(name: name, cardNumber: cardNumber, cardImage: "CardNU"))
+                }
             }
             .disabled(securityCode.isEmpty) //The button is gray when securityCode and expirationDate is empty
         }
