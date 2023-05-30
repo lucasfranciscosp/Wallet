@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273485A52A2623FF002087FF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273485A42A2623FF002087FF /* DetailView.swift */; };
 		464885082A24BFA100B1A36C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464885072A24BFA100B1A36C /* HomeView.swift */; };
 		4648850A2A24BFCF00B1A36C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464885092A24BFCF00B1A36C /* Card.swift */; };
 		4648850C2A24BFE400B1A36C /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648850B2A24BFE400B1A36C /* CardsView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		273485A42A2623FF002087FF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		464885072A24BFA100B1A36C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		464885092A24BFCF00B1A36C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4648850B2A24BFE400B1A36C /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		46E2AE0B2A20EB8400467F69 /* wallet-copycat */ = {
 			isa = PBXGroup;
 			children = (
+				273485A42A2623FF002087FF /* DetailView.swift */,
 				7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */,
 				7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */,
 				7464B4692A24D02200B7567E /* registerCVVView.swift */,
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				464885082A24BFA100B1A36C /* HomeView.swift in Sources */,
+				273485A52A2623FF002087FF /* DetailView.swift in Sources */,
 				4648850C2A24BFE400B1A36C /* CardsView.swift in Sources */,
 				B6F8042C2A212BD4007A0580 /* FaceID.swift in Sources */,
 				46E2AE0F2A20EB8400467F69 /* ContentView.swift in Sources */,

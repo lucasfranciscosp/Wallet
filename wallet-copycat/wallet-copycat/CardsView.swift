@@ -15,7 +15,9 @@ struct CardsView: View {
                 VStack(spacing: 0){
                     //Cards
                     ForEach(cards){card in
-                       CardView(card: card)
+                        NavigationLink(destination: DetailView(currentCard: card)){
+                            CardView(card: card)
+                        }
                     }
                 }
             }

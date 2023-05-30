@@ -17,5 +17,7 @@ struct Card: Identifiable {
 }
 
 var cards: [Card] = [
-    //Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU")
+    Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU"),
+    Card(name: "Caio P", cardNumber: "0000 0000 0000 0000", cardImage: "CardNU"),
+    Card(name: "Caio P", cardNumber: "5423 1234 8950 7777", cardImage: "CardNU")
 ]
