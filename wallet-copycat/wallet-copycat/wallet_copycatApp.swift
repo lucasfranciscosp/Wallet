@@ -1,17 +1,17 @@
 //
-//  wallet_copycatApp.swift
-//  wallet-copycat
+//  IOS_Wallet_CopycatApp.swift
+//  IOS-Wallet-Copycat
 //
-//  Created by Gabriel Gandur on 26/05/23.
+//  Created by Gabriel Gandur on 22/05/23.
 //
 
 import SwiftUI
 
 @main
-struct wallet_copycatApp: App {
+struct IOS_Wallet_CopycatApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

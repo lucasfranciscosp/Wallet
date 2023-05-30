@@ -17,26 +17,15 @@ struct CardsView: View {
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 0){
                     ForEach(cards){card in
-                        CardView(card: card)
-                            .matchedGeometryEffect(id: card.id, in: animation)
-                            .onTapGesture {
-                                withAnimation(.easeInOut(duration: 0.35)){
-                                    currentCard = card
-                                    showDetailCard = true
-                                }
-                            }
+                        NavigationLink(destination: DetailView(currentCard: card)){
+                            CardView(card: card)
+                        }
                     }
                 }
             }
             .coordinateSpace(name: "SCROOL")
         }
-        .padding([.horizontal, .top])
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .overlay {
-            if let currentCard = currentCard, showDetailCard{
-                DetailView(currentCard: currentCard, showDetailCard: $showDetailCard, animation: animation)
-            }
-        }
+        .padding(.horizontal)
     }
     
     //Card View
