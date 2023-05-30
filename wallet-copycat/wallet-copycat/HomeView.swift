@@ -37,12 +37,6 @@ struct HomeView: View {
                         }
                     }
                     
-                    Button(action:{
-                        nfc_reader.scanTag()
-                    }){
-                        Text("Search for NFC TAG")
-                    }
-                    
                     //Botão de adicionar cartao
                     Button(action: {
                         isModalOpen = true

@@ -317,7 +317,7 @@
 				DEVELOPMENT_TEAM = Q92SD7R6D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NFCReaderUsageDescription = "";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Ler cartao atraves do NFC";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -349,7 +349,7 @@
 				DEVELOPMENT_TEAM = Q92SD7R6D3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NFCReaderUsageDescription = "";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Ler cartao atraves do NFC";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
