@@ -11,7 +11,10 @@ import SwiftUI
 struct HomeView: View {
     
     @State var isModalOpen = false
-
+    @State var cards: [Card] = [
+        //Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU")
+    ]
+    
     var body: some View {
         NavigationView {
             ScrollView{
@@ -50,7 +53,7 @@ struct HomeView: View {
                 .padding(.top, 32)
                 .padding(.bottom, 8)
                 .sheet(isPresented: $isModalOpen){
-                    Add_to_Wallet_ModalView(isModalOpen: $isModalOpen)
+                    Add_to_Wallet_ModalView(isModalOpen: $isModalOpen, cards: $cards)
                 }
                 VStack{
                     
@@ -90,7 +93,7 @@ struct HomeView: View {
                                                     .font(.system(size: 16, weight: .semibold))
                                             }
                                         }) .sheet(isPresented: $isModalOpen){
-                                            Add_to_Wallet_ModalView(isModalOpen:  $isModalOpen)
+                                            Add_to_Wallet_ModalView(isModalOpen:  $isModalOpen, cards: $cards)
                                         }
                                     }
                                 }
@@ -99,9 +102,7 @@ struct HomeView: View {
                     }
                     
                     //View que mostra os cartões cadastrados
-                    NavigationLink(destination: Text("Extrato do Cartão View")){
-                        CardsView()
-                    }
+                    CardsView(cards: $cards)
                     
                     //Botão de ver os passes expirados
                     NavigationLink(destination: Text("Expired Passes View")){

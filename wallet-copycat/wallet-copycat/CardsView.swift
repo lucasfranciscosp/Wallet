@@ -9,13 +9,18 @@ import Foundation
 import SwiftUI
 
 struct CardsView: View {
+    
+    @Binding var cards: [Card]
+    
     var body: some View {
         VStack{
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 0){
                     //Cards
                     ForEach(cards){card in
-                       CardView(card: card)
+                        NavigationLink(destination: Text("Extrato do Cartão View")){
+                            CardView(card: card)
+                        }
                     }
                 }
             }
@@ -33,7 +38,7 @@ struct CardsView: View {
                 Image(card.cardImage)
                     .resizable()
                     .scaledToFit()
-                    
+                
                 
                 //Card Details
                 VStack(alignment: .leading, spacing: 10){
@@ -50,11 +55,11 @@ struct CardsView: View {
         .frame(width: 350, height: 220)
         
     }
-        
+    
 }
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        CardsView()
-    }
-}
+//struct Home_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardsView()
+//    }
+//}
