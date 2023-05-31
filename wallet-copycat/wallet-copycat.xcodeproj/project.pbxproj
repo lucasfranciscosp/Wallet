@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273485A52A2623FF002087FF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273485A42A2623FF002087FF /* DetailView.swift */; };
+		2799A3FD2A26D6890065AEEC /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2799A3FC2A26D6890065AEEC /* Detail.swift */; };
 		464885082A24BFA100B1A36C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464885072A24BFA100B1A36C /* HomeView.swift */; };
 		4648850A2A24BFCF00B1A36C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464885092A24BFCF00B1A36C /* Card.swift */; };
 		4648850C2A24BFE400B1A36C /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648850B2A24BFE400B1A36C /* CardsView.swift */; };
@@ -16,11 +18,18 @@
 		46E2AE0F2A20EB8400467F69 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E2AE0E2A20EB8400467F69 /* ScannerView.swift */; };
 		46E2AE112A20EB8500467F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E2AE102A20EB8500467F69 /* Assets.xcassets */; };
 		46E2AE142A20EB8500467F69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E2AE132A20EB8500467F69 /* Preview Assets.xcassets */; };
+		7418D9BD2A26226E005AA29E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7418D9BC2A26226E005AA29E /* Notification.swift */; };
+		7464B46A2A24D02200B7567E /* registerCVVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B4692A24D02200B7567E /* registerCVVView.swift */; };
+		7464B46C2A24D04500B7567E /* Add_to_wallet_ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */; };
+		7464B46E2A24D06500B7567E /* Register_Card_ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */; };
+		74CAF9A82A2624AE0037C433 /* nfcClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CAF9A72A2624AE0037C433 /* nfcClass.swift */; };
 		B6F8042C2A212BD4007A0580 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F8042B2A212BD4007A0580 /* FaceID.swift */; };
 		B6F8043D2A261B00007A0580 /* CreditCardScanner in Frameworks */ = {isa = PBXBuildFile; productRef = B6F8043C2A261B00007A0580 /* CreditCardScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		273485A42A2623FF002087FF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2799A3FC2A26D6890065AEEC /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		464885072A24BFA100B1A36C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		464885092A24BFCF00B1A36C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4648850B2A24BFE400B1A36C /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
@@ -31,6 +40,12 @@
 		46E2AE0E2A20EB8400467F69 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		46E2AE102A20EB8500467F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E2AE132A20EB8500467F69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7418D9BC2A26226E005AA29E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		7464B4692A24D02200B7567E /* registerCVVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerCVVView.swift; sourceTree = "<group>"; };
+		7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_to_wallet_ModalView.swift; sourceTree = "<group>"; };
+		7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Card_ModalView.swift; sourceTree = "<group>"; };
+		74CAF9A72A2624AE0037C433 /* nfcClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nfcClass.swift; sourceTree = "<group>"; };
+		74CAF9A92A26256F0037C433 /* wallet-copycat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "wallet-copycat.entitlements"; sourceTree = "<group>"; };
 		B6F8042B2A212BD4007A0580 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
 		B6F8042D2A24D70B007A0580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +82,14 @@
 			isa = PBXGroup;
 			children = (
 				B6F8042D2A24D70B007A0580 /* Info.plist */,
+				2799A3FC2A26D6890065AEEC /* Detail.swift */,
+				273485A42A2623FF002087FF /* DetailView.swift */,
+				74CAF9A92A26256F0037C433 /* wallet-copycat.entitlements */,
+				74CAF9A72A2624AE0037C433 /* nfcClass.swift */,
+				7418D9BC2A26226E005AA29E /* Notification.swift */,
+				7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */,
+				7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */,
+				7464B4692A24D02200B7567E /* registerCVVView.swift */,
 				B6F8042B2A212BD4007A0580 /* FaceID.swift */,
 				46E2AE0C2A20EB8400467F69 /* wallet_copycatApp.swift */,
 				46E2AE0E2A20EB8400467F69 /* ScannerView.swift */,
@@ -166,13 +189,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				464885082A24BFA100B1A36C /* HomeView.swift in Sources */,
+				273485A52A2623FF002087FF /* DetailView.swift in Sources */,
 				4648850C2A24BFE400B1A36C /* CardsView.swift in Sources */,
 				B6F8042C2A212BD4007A0580 /* FaceID.swift in Sources */,
 				46E2AE0F2A20EB8400467F69 /* ScannerView.swift in Sources */,
+				7464B46E2A24D06500B7567E /* Register_Card_ModalView.swift in Sources */,
+				7464B46A2A24D02200B7567E /* registerCVVView.swift in Sources */,
 				4648850E2A24C00600B1A36C /* View+CornerRadius.swift in Sources */,
+				74CAF9A82A2624AE0037C433 /* nfcClass.swift in Sources */,
 				46E2AE0D2A20EB8400467F69 /* wallet_copycatApp.swift in Sources */,
+				7418D9BD2A26226E005AA29E /* Notification.swift in Sources */,
 				4648850A2A24BFCF00B1A36C /* Card.swift in Sources */,
 				464885102A24C01A00B1A36C /* RoundedCorner.swift in Sources */,
+				7464B46C2A24D04500B7567E /* Add_to_wallet_ModalView.swift in Sources */,
+				2799A3FD2A26D6890065AEEC /* Detail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,26 +328,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "wallet-copycat/wallet-copycat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet-copycat/Preview Content\"";
-				DEVELOPMENT_TEAM = Q7Z5S76S2J;
+				DEVELOPMENT_TEAM = LN44B42H6P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "wallet-copycat/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera usage to obtain credit card credentials from Credit cards.";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Ler cartao atraves do NFC";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ggandur.wallet-copycat";
+				PRODUCT_BUNDLE_IDENTIFIER = matheusbarbosa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -330,26 +362,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "wallet-copycat/wallet-copycat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet-copycat/Preview Content\"";
-				DEVELOPMENT_TEAM = Q7Z5S76S2J;
+				DEVELOPMENT_TEAM = LN44B42H6P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "wallet-copycat/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera usage to obtain credit card credentials from Credit cards.";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Ler cartao atraves do NFC";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ggandur.wallet-copycat";
+				PRODUCT_BUNDLE_IDENTIFIER = matheusbarbosa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

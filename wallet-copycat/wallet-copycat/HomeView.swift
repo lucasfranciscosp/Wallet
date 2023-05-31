@@ -9,15 +9,23 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State var isModalOpen = false
+    @State var cards: [Card] = [
+        //Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU")
+    ]
+    @State var nfc_reader = NFCReader()
+
     var body: some View {
         NavigationView {
             ScrollView{
                 HStack{
+                    
                     Text("Wallet")
                         .font(.system(size: 36, weight: .bold))
                         .frame(maxWidth: 270, alignment: .leading)
                     
-                    //Botão de adicionar cartão
+                    //Botão de rastrear pacote
                     NavigationLink(destination: Text("Rastrear Pacote View")){
                         ZStack{
                             Color(.black)
@@ -29,8 +37,10 @@ struct HomeView: View {
                         }
                     }
                     
-                    //Botão de rastrear pacotes
-                    NavigationLink(destination: Text("Adicionar Cartão View")){
+                    //Botão de adicionar cartao
+                    Button(action: {
+                        isModalOpen = true
+                    }, label: {
                         ZStack{
                             Color(.black)
                                 .frame(width: 32, height: 32)
@@ -39,10 +49,13 @@ struct HomeView: View {
                                 .foregroundColor(.white)
                                 .bold()
                         }
-                    }
+                    })
                 }
                 .padding(.top, 32)
                 .padding(.bottom, 8)
+                .sheet(isPresented: $isModalOpen){
+                    Add_to_Wallet_ModalView(isModalOpen: $isModalOpen, cards: $cards)
+                }
                 VStack{
                     
                     //Só mostra esse card, se ainda não tiver cartões registrados
@@ -70,9 +83,9 @@ struct HomeView: View {
                                         Text("Add a credit or debit card to Wallet.")
                                             .frame(maxWidth: 220, alignment: .leading)
                                             .foregroundColor(.white)
-                                        Button {
-                                            print("Adicionar cartão pressionado")
-                                        } label: {
+                                        Button(action:  {
+                                            isModalOpen = true
+                                        }, label: {
                                             ZStack{
                                                 Color(.white)
                                                     .frame(width: 80, height: 32)
@@ -80,6 +93,8 @@ struct HomeView: View {
                                                 Text("ADD")
                                                     .font(.system(size: 16, weight: .semibold))
                                             }
+                                        }) .sheet(isPresented: $isModalOpen){
+                                            Add_to_Wallet_ModalView(isModalOpen:  $isModalOpen, cards: $cards)
                                         }
                                     }
                                 }
@@ -88,9 +103,7 @@ struct HomeView: View {
                     }
                     
                     //View que mostra os cartões cadastrados
-                    NavigationLink(destination: Text("Extrato do Cartão View")){
-                        CardsView()
-                    }
+                    CardsView(cards: $cards)
                     
                     //Botão de ver os passes expirados
                     NavigationLink(destination: Text("Expired Passes View")){

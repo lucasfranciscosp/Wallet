@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import LocalAuthentication
 
-func  authenticate() async -> String {
+func  authenticate() async -> Int {
     let context = LAContext()
     var error: NSError?
     
@@ -19,15 +19,16 @@ func  authenticate() async -> String {
             context.evaluatePolicy(.deviceOwnerAuthentication,
                                    localizedReason: "This is for security reasons") { success, authenticationError in
                 if success {
-                    continuation.resume(returning: "UNLOCKED")
+                    continuation.resume(returning: 1)
                 } else {
-                    continuation.resume(returning: "There was a problem")
+                    continuation.resume(returning: 0)
                 }
             }
         }
         
     } else {
         // Abrir numpad para colocar senha
-        return "Phone does not have biometrics"
+        return -1
+        //return "Phone does not have biometrics"
     }
 }
