@@ -7,12 +7,10 @@
 import SwiftUI
 
 struct CardsView: View {
-    // Detail View Properties
-    @State var currentCard: Card?
-    @State var showDetailCard: Bool = false
-    @Namespace var animation
     
-    var body: some View{
+    @Binding var cards: [Card]
+    
+    var body: some View {
         VStack{
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 0){

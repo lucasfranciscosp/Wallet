@@ -16,6 +16,7 @@ struct Register_Card_ModalView: View {
     @State var cardNumber = ""
     @State var carImage = "CardNU"
     @Binding var isModalOpen: Bool
+    @Binding var cards: [Card]
     
     var body: some View {
         
@@ -58,7 +59,7 @@ struct Register_Card_ModalView: View {
         }
         //"Next" button on the top of the screen
         .toolbar {
-            NavigationLink(destination: registerCVVView(isModalOpen: $isModalOpen)){
+            NavigationLink(destination: registerCVVView(isModalOpen: $isModalOpen, cardNumber: $cardNumber, name: $name, cards: $cards)){
                 Text("Next")
             }
             .disabled(cardNumber.isEmpty) //The button is gray when cardnumber is empty

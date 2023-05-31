@@ -15,8 +15,3 @@ struct Card: Identifiable {
     var cardNumber: String
     var cardImage: String
 }
-
-var cards: [Card] = [
-    Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardBB"),
-    Card(name: "Caio P", cardNumber: "0000 0000 0000 4495", cardImage: "CardNU")
-]
