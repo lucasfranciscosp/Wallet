@@ -19,80 +19,80 @@ struct DetailView: View {
     
     var currentCard: Card
     var body: some View {
-            ZStack {
-                VStack{
-                    ScrollView{
+        ZStack {
+            VStack{
+                ScrollView{
                     VStack{
                         Button(action: {
-                        
-                        Task {
-                            unlocked = await authenticate()
-                            if unlocked == 1 {
-                                nfc_reader.scanTag()
-                            }
-                        }    
+                            
+                            Task {
+                                unlocked = await authenticate()
+                                if unlocked == 1 {
+                                    nfc_reader.scanTag()
+                                    nfc_reader.details.append(Detail(price: "R$ 340,80", place: "eldoradoLojinha**", gps: "Campinas", hours: "5 minutes ago"))
+                                }
+                            }    
                         }){
-                          CardView()
+                            CardView()
                                 .frame(height: 220)
                                 .padding(.top, 20)
                                 .shadow(radius: 7)
                         }
-                        ScrollView{
-                            VStack(alignment: .leading) {
-                                
-                                Text("Latest Transactions")
-                                    .font(.title2)
-                                    .fontWeight(.bold)
-                                    .padding()
-                                    .padding(.bottom, -50)
-                                                                
-                                List {
-                                        ForEach(details){ detail in
-                                            // Card View
-                                            NavigationLink(destination: Text("Destino")){
-                                                VStack(alignment: .leading){
-                                                    DetailCardView(detail: detail)
-                                                }
-                                            }
+                        VStack(alignment: .leading) {
+                            
+                            Text("Latest Transactions")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .padding()
+                                .padding(.bottom, -50)
+                            
+                            List {
+                                ForEach(nfc_reader.details){ detail in
+                                    // Card View
+                                    NavigationLink(destination: Text("Destino")){
+                                        VStack(alignment: .leading){
+                                            DetailCardView(detail: detail)
+                                        }
                                     }
-                                    .listRowBackground(Color("LightGray"))
                                 }
-                                .frame(height: 500)
-                                .scrollContentBackground(.hidden)
-                                
-                                .toolbar(content: {
-                                           ToolbarItem (placement: .navigationBarLeading)  {
-                                                    
-                                               Button(action: {
-                                                   presentationMode.wrappedValue.dismiss()
-                                               }, label: {
-                                                   Text("Done")
-                                                       .fontWeight(.semibold)
-                                                       .foregroundColor(.black)
-                                               })
-                                           }
-                                    
-                                    ToolbarItem (placement: .navigationBarTrailing)  {
-                                        Button(action: {
-                                            
-                                        }, label: {
-                                            Image(systemName: "ellipsis.circle")
-                                                .foregroundColor(.black)
-                                                
-                                        })
-                                    }
-          
-                                           })
+                                .listRowBackground(Color("LightGray"))
                             }
+                            .frame(height: 500)
+                            .scrollContentBackground(.hidden)
+                            
+                            .toolbar(content: {
+                                ToolbarItem (placement: .navigationBarLeading)  {
+                                    
+                                    Button(action: {
+                                        presentationMode.wrappedValue.dismiss()
+                                    }, label: {
+                                        Text("Done")
+                                            .fontWeight(.semibold)
+                                            .foregroundColor(.black)
+                                    })
+                                }
+                                
+                                ToolbarItem (placement: .navigationBarTrailing)  {
+                                    Button(action: {
+                                        
+                                    }, label: {
+                                        Image(systemName: "ellipsis.circle")
+                                            .foregroundColor(.black)
+                                        
+                                    })
+                                }
+                                
+                            })
                         }
                     }
+                    
                 }
-                    .scrollIndicators(.hidden)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .navigationBarBackButtonHidden(true)
+                .scrollIndicators(.hidden)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .navigationBarBackButtonHidden(true)
             }
         }
-        }
+    }
     
     
     @ViewBuilder
@@ -160,8 +160,8 @@ struct DetailCardView: View{
         }
         Text(detail.gps)
         Text(detail.hours)
-        }
     }
+}
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {

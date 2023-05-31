@@ -12,6 +12,12 @@ import UserNotifications
 //Class that contains NFC funcionalities
 class NFCReader: NSObject, ObservableObject, NFCNDEFReaderSessionDelegate{
     
+    var details: [Detail] = [
+        Detail(price: "R$ 16,80", place: "Lsmfoodsltda*******al", gps: "Campinas", hours: "12 hours ago"),
+        Detail(price: "R$ 2,00", place: "Lsmfoodsltda*******al", gps: "Buzios", hours: "02 hours ago"),
+        Detail(price: "R$ 50.000,00", place: "LSeilaLoja*******al", gps: "Nova Odessa", hours: "777 hours ago")
+    ]
+    
     //Session to read NFC Tags (Closes in 60 seconds)
     var nfcSession: NFCNDEFReaderSession?
     
@@ -21,7 +27,7 @@ class NFCReader: NSObject, ObservableObject, NFCNDEFReaderSessionDelegate{
         
         nfcSession = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
         
-        nfcSession?.alertMessage = "Put the NFC tag close to the phone" //Alert message everytime I open my session to read NFC
+        nfcSession?.alertMessage = "Hold Near Reader" //Alert message everytime I open my session to read NFC
         
         nfcSession?.begin()
         
@@ -69,14 +75,14 @@ class NFCReader: NSObject, ObservableObject, NFCNDEFReaderSessionDelegate{
                 
                 ///Gerar notificacao e descontar saldo aqui
                 case .readOnly:
-                    session.alertMessage = "Read only TAG"
+                    session.alertMessage = "Payment Approved"
                     requestAuthorization()
                     sendNotification()
                     session.invalidate()
                     
                 ///Gerar notificacao e descontar saldo aqui
                 case .readWrite:
-                    session.alertMessage = "Read and write TAG"
+                    session.alertMessage = "Payment Approved"
                     requestAuthorization()
                     sendNotification()
                     session.invalidate()

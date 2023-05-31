@@ -22,7 +22,7 @@ func sendNotification(){
     
     let content = UNMutableNotificationContent()
     content.title = "Payment detected"
-    content.body = "3R$ payment on lojinha"
+    content.body = "340,80 R$ payment on eldoradoLojinha**"
         .lowercased()
     content.sound = UNNotificationSound.default
     
