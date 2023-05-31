@@ -6,19 +6,37 @@
 //
 
 import SwiftUI
+import CoreNFC
+
 // Detail View
 struct DetailView: View {
+    @State var nfc_reader = NFCReader()
+    @State private var text = "LOCKED"
+    @State var unlocked = 0
+    
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+    
+    
     var currentCard: Card
     var body: some View {
             ZStack {
                 VStack{
                     ScrollView{
                     VStack{
-                        CardView()
-                            .frame(height: 220)
-                            .padding(.top, 20)
-                            .shadow(radius: 7)
+                        Button(action: {
+                        
+                        Task {
+                            unlocked = await authenticate()
+                            if unlocked == 1 {
+                                nfc_reader.scanTag()
+                            }
+                        }    
+                        }){
+                          CardView()
+                                .frame(height: 220)
+                                .padding(.top, 20)
+                                .shadow(radius: 7)
+                        }
                         ScrollView{
                             VStack(alignment: .leading) {
                                 

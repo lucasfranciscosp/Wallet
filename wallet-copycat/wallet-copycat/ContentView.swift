@@ -19,11 +19,6 @@ struct ContentView: View {
             Text("ola mundo!!!")
             Text(text)
                 .bold()
-            Button("Usar Cartão"){
-                Task {
-                    self.text = await authenticate()
-                }
-            }
         }
         .padding()
     }
