@@ -101,7 +101,6 @@ struct HomeView: View {
                     //View que mostra os cartões cadastrados
                         CardsView()
                     
-                    
                     //Botão de ver os passes expirados
                     NavigationLink(destination: Text("Expired Passes View")){
                         Text("View 2 Expired Passes")

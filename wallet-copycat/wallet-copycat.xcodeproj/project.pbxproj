@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		273485A52A2623FF002087FF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273485A42A2623FF002087FF /* DetailView.swift */; };
+		2799A3FD2A26D6890065AEEC /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2799A3FC2A26D6890065AEEC /* Detail.swift */; };
 		464885082A24BFA100B1A36C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464885072A24BFA100B1A36C /* HomeView.swift */; };
 		4648850A2A24BFCF00B1A36C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464885092A24BFCF00B1A36C /* Card.swift */; };
 		4648850C2A24BFE400B1A36C /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648850B2A24BFE400B1A36C /* CardsView.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		273485A42A2623FF002087FF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2799A3FC2A26D6890065AEEC /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		464885072A24BFA100B1A36C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		464885092A24BFCF00B1A36C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4648850B2A24BFE400B1A36C /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		46E2AE0B2A20EB8400467F69 /* wallet-copycat */ = {
 			isa = PBXGroup;
 			children = (
+				2799A3FC2A26D6890065AEEC /* Detail.swift */,
 				273485A42A2623FF002087FF /* DetailView.swift */,
 				7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */,
 				7464B46D2A24D06500B7567E /* Register_Card_ModalView.swift */,
@@ -179,6 +182,7 @@
 				4648850A2A24BFCF00B1A36C /* Card.swift in Sources */,
 				464885102A24C01A00B1A36C /* RoundedCorner.swift in Sources */,
 				7464B46C2A24D04500B7567E /* Add_to_wallet_ModalView.swift in Sources */,
+				2799A3FD2A26D6890065AEEC /* Detail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet-copycat/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VCZGT86T2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
@@ -337,7 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet-copycat/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VCZGT86T2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
