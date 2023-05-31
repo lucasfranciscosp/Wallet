@@ -13,10 +13,11 @@
 		4648850E2A24C00600B1A36C /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648850D2A24C00600B1A36C /* View+CornerRadius.swift */; };
 		464885102A24C01A00B1A36C /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648850F2A24C01A00B1A36C /* RoundedCorner.swift */; };
 		46E2AE0D2A20EB8400467F69 /* wallet_copycatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E2AE0C2A20EB8400467F69 /* wallet_copycatApp.swift */; };
-		46E2AE0F2A20EB8400467F69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E2AE0E2A20EB8400467F69 /* ContentView.swift */; };
+		46E2AE0F2A20EB8400467F69 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E2AE0E2A20EB8400467F69 /* ScannerView.swift */; };
 		46E2AE112A20EB8500467F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E2AE102A20EB8500467F69 /* Assets.xcassets */; };
 		46E2AE142A20EB8500467F69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E2AE132A20EB8500467F69 /* Preview Assets.xcassets */; };
 		B6F8042C2A212BD4007A0580 /* FaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F8042B2A212BD4007A0580 /* FaceID.swift */; };
+		B6F8043D2A261B00007A0580 /* CreditCardScanner in Frameworks */ = {isa = PBXBuildFile; productRef = B6F8043C2A261B00007A0580 /* CreditCardScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +28,11 @@
 		4648850F2A24C01A00B1A36C /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		46E2AE092A20EB8400467F69 /* wallet-copycat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wallet-copycat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E2AE0C2A20EB8400467F69 /* wallet_copycatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallet_copycatApp.swift; sourceTree = "<group>"; };
-		46E2AE0E2A20EB8400467F69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		46E2AE0E2A20EB8400467F69 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		46E2AE102A20EB8500467F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E2AE132A20EB8500467F69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6F8042B2A212BD4007A0580 /* FaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceID.swift; sourceTree = "<group>"; };
+		B6F8042D2A24D70B007A0580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F8043D2A261B00007A0580 /* CreditCardScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +66,10 @@
 		46E2AE0B2A20EB8400467F69 /* wallet-copycat */ = {
 			isa = PBXGroup;
 			children = (
+				B6F8042D2A24D70B007A0580 /* Info.plist */,
 				B6F8042B2A212BD4007A0580 /* FaceID.swift */,
 				46E2AE0C2A20EB8400467F69 /* wallet_copycatApp.swift */,
-				46E2AE0E2A20EB8400467F69 /* ContentView.swift */,
+				46E2AE0E2A20EB8400467F69 /* ScannerView.swift */,
 				464885072A24BFA100B1A36C /* HomeView.swift */,
 				464885092A24BFCF00B1A36C /* Card.swift */,
 				4648850B2A24BFE400B1A36C /* CardsView.swift */,
@@ -101,6 +105,9 @@
 			dependencies = (
 			);
 			name = "wallet-copycat";
+			packageProductDependencies = (
+				B6F8043C2A261B00007A0580 /* CreditCardScanner */,
+			);
 			productName = "wallet-copycat";
 			productReference = 46E2AE092A20EB8400467F69 /* wallet-copycat.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 46E2AE002A20EB8400467F69;
+			packageReferences = (
+				B6F8043B2A261B00007A0580 /* XCRemoteSwiftPackageReference "credit-card-scanner" */,
+			);
 			productRefGroup = 46E2AE0A2A20EB8400467F69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,7 +168,7 @@
 				464885082A24BFA100B1A36C /* HomeView.swift in Sources */,
 				4648850C2A24BFE400B1A36C /* CardsView.swift in Sources */,
 				B6F8042C2A212BD4007A0580 /* FaceID.swift in Sources */,
-				46E2AE0F2A20EB8400467F69 /* ContentView.swift in Sources */,
+				46E2AE0F2A20EB8400467F69 /* ScannerView.swift in Sources */,
 				4648850E2A24C00600B1A36C /* View+CornerRadius.swift in Sources */,
 				46E2AE0D2A20EB8400467F69 /* wallet_copycatApp.swift in Sources */,
 				4648850A2A24BFCF00B1A36C /* Card.swift in Sources */,
@@ -291,9 +301,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet-copycat/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VCZGT86T2;
+				DEVELOPMENT_TEAM = Q7Z5S76S2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "wallet-copycat/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera usage to obtain credit card credentials from Credit cards.";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -321,9 +333,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wallet-copycat/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VCZGT86T2;
+				DEVELOPMENT_TEAM = Q7Z5S76S2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "wallet-copycat/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow camera usage to obtain credit card credentials from Credit cards.";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Security aaa";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -365,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6F8043B2A261B00007A0580 /* XCRemoteSwiftPackageReference "credit-card-scanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yhkaplan/credit-card-scanner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6F8043C2A261B00007A0580 /* CreditCardScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6F8043B2A261B00007A0580 /* XCRemoteSwiftPackageReference "credit-card-scanner" */;
+			productName = CreditCardScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46E2AE012A20EB8400467F69 /* Project object */;
 }
