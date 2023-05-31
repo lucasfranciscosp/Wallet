@@ -61,7 +61,7 @@ struct Add_to_Wallet_ModalView: View {
                 
                 List {
                     //First button
-                    NavigationLink(destination: Register_Card_ModalView(isModalOpen: $isModalOpen, cards: $cards)){
+                    NavigationLink(destination: ScannerView(isModalOpen: $isModalOpen, cards: $cards)){
                         HStack{
                             ZStack{
                                 Color("LightBlue")
