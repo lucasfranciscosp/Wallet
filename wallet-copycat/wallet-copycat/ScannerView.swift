@@ -4,6 +4,7 @@ import CreditCardScanner
 struct CreditCardScannerView: UIViewControllerRepresentable {
     @Binding var isModalOpen: Bool
     @Binding var cards: [Card]
+    @Binding var cardRead: Bool
     let onScan: () -> Void
     
     func makeUIViewController(context: Context) -> CreditCardScannerViewController {
@@ -18,18 +19,20 @@ struct CreditCardScannerView: UIViewControllerRepresentable {
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(isModalOpen: $isModalOpen, cards: $cards, onScan: onScan)
+        Coordinator(isModalOpen: $isModalOpen, cards: $cards,  cardRead: $cardRead, onScan: onScan)
     }
     
     class Coordinator: NSObject, CreditCardScannerViewControllerDelegate {
-        internal init(isModalOpen: Binding<Bool>, cards: Binding<[Card]>, onScan: @escaping () -> Void) {
+        internal init(isModalOpen: Binding<Bool>, cards: Binding<[Card]>, cardRead: Binding<Bool>, onScan: @escaping () -> Void) {
             self._isModalOpen = isModalOpen
             self._cards = cards
             self.onScan = onScan
+            self._cardRead = cardRead
         }
         
         @Binding var isModalOpen: Bool
         @Binding var cards: [Card]
+        @Binding var cardRead: Bool
         let onScan: () -> Void
         
         func creditCardScannerViewController(_ viewController: CreditCardScannerViewController, didErrorWith error: CreditCardScannerError) {
@@ -44,7 +47,7 @@ struct CreditCardScannerView: UIViewControllerRepresentable {
             onScan()
             // Só testando se está funcionando
             cards.append(Card(name: card.name ?? "Teste", cardNumber: card.number ?? "1232 1212 9999 7722", cardImage: "CardNU"))
-            isModalOpen = false
+            cardRead = true
             
             
         }
@@ -60,15 +63,16 @@ struct ScannerView: View {
     @Binding var isModalOpen: Bool
     @Binding var cards: [Card]
     
+    @State var cardRead:Bool = false
     @State var shouldNavigateToNextView: Bool = false
     
     var body: some View {
         ZStack {
-            CreditCardScannerView(isModalOpen: $isModalOpen, cards: $cards) {
+            CreditCardScannerView(isModalOpen: $isModalOpen, cards: $cards, cardRead:$cardRead) {
                 shouldNavigateToNextView = true
             }
             VStack{
-                NavigationLink(destination: Register_Card_ModalView(isModalOpen: $isModalOpen, cards: $cards)){
+                NavigationLink(destination: Register_Card_ModalView(isModalOpen: $isModalOpen, cards: $cards), isActive: $cardRead){
                     Text("Enter Card Details Manually")
                 }
                 .padding(.top, 600)

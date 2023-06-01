@@ -45,7 +45,7 @@ struct Register_Card_ModalView: View {
                     Text("Card Number     ") //TextField Title
                         .bold()
                     
-                    TextField("Required", text: $cardNumber)
+                    TextField("Required", text: $cards[cards.count-1].cardNumber)
                         .keyboardType(.numberPad)
                     
                 }.listRowBackground(Color("LightGray"))
@@ -62,7 +62,7 @@ struct Register_Card_ModalView: View {
             NavigationLink(destination: registerCVVView(isModalOpen: $isModalOpen, cardNumber: $cardNumber, name: $name, cards: $cards)){
                 Text("Next")
             }
-            .disabled(cardNumber.isEmpty) //The button is gray when cardnumber is empty
+            .disabled(cards[cards.count-1].cardNumber.isEmpty || name == "") //The button is gray when cardnumber is empty
             
         }
     }
