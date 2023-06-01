@@ -94,10 +94,3 @@ func customCardNumber(number: String) -> String{
     
     return newValue
 }
-
-//struct Cards_View: PreviewProvider {
-//    static var previews: some View {
-//        CardsView()
-//    }
-//}
-

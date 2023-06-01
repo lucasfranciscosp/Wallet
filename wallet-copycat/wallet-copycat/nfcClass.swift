@@ -72,15 +72,15 @@ class NFCReader: NSObject, ObservableObject, NFCNDEFReaderSessionDelegate{
                 case .notSupported:
                     session.alertMessage = "TAG isn't supported"
                     session.invalidate()
-                
-                ///Gerar notificacao e descontar saldo aqui
+                    
+                    ///Gerar notificacao e descontar saldo aqui
                 case .readOnly:
                     session.alertMessage = "Payment Approved"
                     requestAuthorization()
                     sendNotification()
                     session.invalidate()
                     
-                ///Gerar notificacao e descontar saldo aqui
+                    ///Gerar notificacao e descontar saldo aqui
                 case .readWrite:
                     session.alertMessage = "Payment Approved"
                     requestAuthorization()
@@ -98,4 +98,3 @@ class NFCReader: NSObject, ObservableObject, NFCNDEFReaderSessionDelegate{
     }
     
 }
-

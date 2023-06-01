@@ -104,10 +104,3 @@ struct Add_to_Wallet_ModalView: View {
         }
     }
 }
-
-
-
-
-
-
-

@@ -14,10 +14,10 @@ struct HomeView: View {
     @State var cards: [Card] = [
         Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU"),
         Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU"),
-//        Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU")
+        //        Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU")
     ]
     @State var nfc_reader = NFCReader()
-
+    
     var body: some View {
         NavigationView {
             ScrollView{

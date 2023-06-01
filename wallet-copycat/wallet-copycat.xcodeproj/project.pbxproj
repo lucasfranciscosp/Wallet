@@ -76,9 +76,9 @@
 		46E2AE0B2A20EB8400467F69 /* wallet-copycat */ = {
 			isa = PBXGroup;
 			children = (
+				74CAF9A92A26256F0037C433 /* wallet-copycat.entitlements */,
 				2799A3FC2A26D6890065AEEC /* Detail.swift */,
 				273485A42A2623FF002087FF /* DetailView.swift */,
-				74CAF9A92A26256F0037C433 /* wallet-copycat.entitlements */,
 				74CAF9A72A2624AE0037C433 /* nfcClass.swift */,
 				7418D9BC2A26226E005AA29E /* Notification.swift */,
 				7464B46B2A24D04500B7567E /* Add_to_wallet_ModalView.swift */,

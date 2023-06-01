@@ -31,7 +31,7 @@ struct DetailView: View {
                                     nfc_reader.scanTag()
                                     nfc_reader.details.append(Detail(price: "R$ 340,80", place: "eldoradoLojinha**", gps: "Campinas", hours: "5 minutes ago"))
                                 }
-                            }    
+                            }
                         }){
                             CardView()
                                 .frame(height: 220)
