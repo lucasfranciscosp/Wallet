@@ -15,9 +15,7 @@ struct CardsView: View {
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 0){
                     ForEach(cards){card in
-                        NavigationLink(destination: DetailView(currentCard: card)){
-                            CardView(card: card)
-                        }
+                        CardView(card: card)
                     }
                 }
             }
@@ -36,9 +34,14 @@ struct CardsView: View {
             let offset = -rect.minY + CGFloat(getIndex(Card: card) * 55)
             
             ZStack(alignment: .leading){
-                Image(card.cardImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                NavigationLink(destination: DetailView(currentCard: card)){
+                    Image(card.cardImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 220)
+                }
+                .offset(y: offset)
+                
                 //Details
                 VStack(alignment: .leading){
                     HStack{
@@ -54,9 +57,6 @@ struct CardsView: View {
                     }.padding(.top, 175)
                 }
             }
-            // Max Size
-            .offset(y: offset)
-            
         }// Max Size
         .frame(height: 220)
     }

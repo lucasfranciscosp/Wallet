@@ -12,7 +12,9 @@ struct HomeView: View {
     
     @State var isModalOpen = false
     @State var cards: [Card] = [
-        //Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU")
+        Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU"),
+        Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU"),
+//        Card(name: "Caio P", cardNumber: "5423 1234 8950 0986", cardImage: "CardNU")
     ]
     @State var nfc_reader = NFCReader()
 
@@ -105,15 +107,6 @@ struct HomeView: View {
                     //View que mostra os cartões cadastrados
                     CardsView(cards: $cards)
                     
-                    //Botão de ver os passes expirados
-                    NavigationLink(destination: Text("Expired Passes View")){
-                        Text("View 2 Expired Passes")
-                            .bold()
-                            .font(.system(size: 16))
-                            .padding(8)
-                            .background(Color("LightGray"))
-                            .cornerRadius(10)
-                    }
                 }
             }
         }
