@@ -65,11 +65,12 @@ struct registerCVVView: View {
         .toolbar {
             Button("Next") {
                 isModalOpen = false
-                if cards.count.isMultiple(of: 2){
-                    cards.append(Card(name: name, cardNumber: cardNumber, cardImage: "CardNU"))
-                } else {
-                    cards.append(Card(name: name, cardNumber: cardNumber, cardImage: "CardBB"))
-                }
+                cards.append(cards[cards.count - 1])
+//                if cards.count.isMultiple(of: 2){
+//                    cards.append(Card(name: name, cardNumber: cardNumber, cardImage: "CardNU"))
+//                } else {
+//                    cards.append(Card(name: name, cardNumber: cardNumber, cardImage: "CardBB"))
+//                }
             }
             .disabled(securityCode.isEmpty) //The button is gray when securityCode and expirationDate is empty
         }

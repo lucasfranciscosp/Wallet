@@ -9,9 +9,7 @@
 import SwiftUI
 
 struct Register_Card_ModalView: View {
-    
-    @Environment(\.presentationMode) var presentation //Var in order to use modal
-    
+    @Environment(\.presentationMode) var presentation
     @State var name = ""
     @State var cardNumber = ""
     @State var carImage = "CardNU"
@@ -19,9 +17,9 @@ struct Register_Card_ModalView: View {
     @Binding var cards: [Card]
     
     var body: some View {
+        let currentCardNumber = cards.count != 0 ? cards[cards.count - 1].cardNumber : ""
         
-        VStack{
-            
+        VStack {
             Text("Card Details")
                 .padding()
                 .font(.largeTitle)
@@ -32,39 +30,37 @@ struct Register_Card_ModalView: View {
                 .frame(width: 350)
                 .font(.body)
             
-            Form{
-                HStack{
-                    Text("Name                    ")//TextField Title
+            Form {
+                HStack {
+                    Text("Name")
                         .bold()
                     
                     TextField("Required", text: $name)
-                    
-                }.listRowBackground(Color("LightGray"))
+                }
+                .listRowBackground(Color("LightGray"))
                 
-                HStack{
-                    Text("Card Number     ") //TextField Title
+                HStack {
+                    Text("Card Number")
                         .bold()
                     
-                    TextField("Required", text: $cards[cards.count-1].cardNumber)
+                    TextField("Required", text: $cardNumber)
                         .keyboardType(.numberPad)
-                    
-                }.listRowBackground(Color("LightGray"))
-                
+                        .onAppear {
+                            cardNumber = currentCardNumber
+                        }
+                }
+                .listRowBackground(Color("LightGray"))
             }
             .scrollContentBackground(.hidden)
-            .padding(.top, -25) ///Look for another way to do this
+            .padding(.top, -25)
             
             Spacer()
-            
         }
-        //"Next" button on the top of the screen
         .toolbar {
-            NavigationLink(destination: registerCVVView(isModalOpen: $isModalOpen, cardNumber: $cardNumber, name: $name, cards: $cards)){
+            NavigationLink(destination: registerCVVView(isModalOpen: $isModalOpen, cardNumber: $cardNumber, name: $name, cards: $cards)) {
                 Text("Next")
             }
-            .disabled(cards[cards.count-1].cardNumber.isEmpty || name == "") //The button is gray when cardnumber is empty
-            
+            .disabled(cardNumber.isEmpty || name.isEmpty)
         }
     }
-    
 }

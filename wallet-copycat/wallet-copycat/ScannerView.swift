@@ -11,6 +11,10 @@ struct CreditCardScannerView: UIViewControllerRepresentable {
         let viewController = CreditCardScannerViewController(delegate: context.coordinator)
         viewController.subtitleLabelText = "Position your debit or credit card in the frame to scan it."
         viewController.cancelButtonTitleText = ""
+        viewController.cameraViewCreditCardFrameStrokeColor = .black
+        viewController.cameraViewMaskLayerColor = .white
+        viewController.textBackgroundColor = .white
+        viewController.labelTextColor = .black
         return viewController
     }
     
